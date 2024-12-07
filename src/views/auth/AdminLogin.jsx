@@ -49,7 +49,7 @@ const AdminLogin = () => {
                 <div className='bg-[#283046] p-4 rounded-md'>
                     <div className='h-[70px] flex justify-center items-center'>
                         <div className='w-[180px] h-[50px]'>
-                            <img className='w-full h-full' src="http://localhost:3000/images/logo.png" alt="logo" />
+                            <img className='w-full h-full' src="https://dashboard-j33q.onrender.com/images/logo.png" alt="logo" />
                         </div>
                     </div>
                     <form onSubmit={submit}>
