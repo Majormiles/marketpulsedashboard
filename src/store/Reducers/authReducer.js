@@ -150,9 +150,15 @@ export const authReducer = createSlice({
             state.loader = true
         },
         [seller_login.rejected]: (state, { payload }) => {
-            state.loader = false
-            state.errorMessage = payload.error
-        },
+            state.loader = false;
+            // Ensure payload is defined before accessing properties
+            if (payload && payload.error) {
+                state.errorMessage = payload.error;
+            } else {
+                state.errorMessage = "An unknown error occurred"; // Fallback error message
+            }
+        }
+        ,
         [seller_login.fulfilled]: (state, { payload }) => {
             state.loader = false
             state.successMessage = payload.message
